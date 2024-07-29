@@ -140,7 +140,7 @@ module.exports = pool
 
 ```
 
-caso for utilizar a conexao por url adicione a url o arquivo `.env`
+caso for utilizar a conexao por url crio um aruivo com o nome `.env` na raix do projeto e adicione a url no arquivo como no exemplo abaixo
 
 ```
 DATABASE_URL=ADICIONE_AQUI_SUA_URL
