@@ -1,4 +1,5 @@
 const { Pool } = require('pg')
+require('dotenv').config()
 
 // Cria uma pool de conexões com o PostgreSQL local
 // const pool = new Pool({
@@ -14,8 +15,7 @@ const { Pool } = require('pg')
 
 // Cria uma pool de conexões com o PostgreSQL usando uma URL de conexão
 const pool = new Pool({
-  connectionString:
-    'postgresql://ronansalvador:jSFJehW1y9rm@ep-wild-butterfly-a51m37xs.us-east-2.aws.neon.tech/teste-ms?sslmode=require', // Usa a variável de ambiente para a URL de conexão
+  connectionString: process.env.DATABASE_URL, // Usa a variável de ambiente para a URL de conexão
   max: 10, // Número máximo de conexões na pool
   idleTimeoutMillis: 30000, // Tempo máximo de inatividade antes de fechar a conexão
   connectionTimeoutMillis: 2000, // Tempo máximo de espera para uma conexão antes de dar timeout
